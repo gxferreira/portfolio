@@ -1,0 +1,160 @@
+* {
+	box-sizing:border-box; /*check prefixes*/
+}
+
+/* Typography */
+html {
+	font-size: 1em;
+}
+
+body {
+  background-color: white;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #333;
+}
+
+p {
+	margin-bottom: 1.3em;
+	font-family: 'Libre Baskerville', serif;
+}
+
+a{
+	color: red;
+}
+
+a:hover{
+	text-decoration: none;
+	color: tomato;
+}
+
+h1, h2, h3, h4 {
+  margin: 1.414em 0 0.5em;
+  font-weight: inherit;
+  line-height: 1.2;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.157em;
+}
+
+h2 {
+	font-size: 2.369em;
+}
+
+h3 {font-size: 1.777em;}
+
+h4 {font-size: 1.333em;}
+
+small, .font_small {font-size: 0.75em;}
+
+p, h2{
+	max-width: 750px;
+}
+
+/* Layout */
+.container{
+	max-width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.img-hero{
+	max-width: 100%;
+}
+
+.site-title{
+	float:left;
+	font-weight: bold;
+	font-size: 1.5em;
+	color: tomato;
+	text-decoration: none;
+}
+
+.site-title:hover{
+	background: tomato;
+	color: black;
+}
+
+.navbar{
+	float: right;
+}
+
+
+/* Navigation */
+
+.site-header{
+	background-color: #333;
+	color: #EEE;
+}
+.site-header{
+	font-size: 1.25em;
+	padding: 2em 0;
+}
+
+.header-nav{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.header-nav li{
+	display: inline-block;
+}
+
+.site-footer{
+	margin-top: 3em;
+	background: #333333;
+	color: white;
+	padding: 2em 0;
+}
+
+.nav-link{
+	background: #eee;
+	padding: 0.25em 0.5em;
+	text-decoration: none;
+	color: black;
+	margin: 0 0.25em;
+}
+
+.nav-link:hover{
+	text-decoration: underline;
+}
+
+/* Columns */
+
+.col{
+	float: left;
+	width: 33.33%;
+}
+
+/* Utilities */
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
