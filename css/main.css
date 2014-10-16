@@ -8,11 +8,12 @@ html {
 }
 
 body {
-  background-color: white;
-  font-family: 'Yanone Kaffeesatz', sans-serif;
-  font-weight: 400;
-  line-height: 1.45;
-  color: #333;
+	background-color: white;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	font-weight: 400;
+	line-height: 1.45;
+	color: #333;
+	font-size: 16px;
 }
 
 p {
@@ -30,14 +31,14 @@ a:hover{
 }
 
 h1, h2, h3, h4 {
-  margin: 1.414em 0 0.5em;
-  font-weight: inherit;
-  line-height: 1.2;
+	margin: 1.414em 0 0.5em;
+	font-weight: inherit;
+	line-height: 1.2;
 }
 
 h1 {
-  margin-top: 0;
-  font-size: 3.157em;
+	margin-top: 0;
+	font-size: 3.157em;
 }
 
 h2 {
@@ -61,12 +62,18 @@ p, h2{
 	margin-right: auto;
 }
 
+@media (max-width: 1050px){
+	.container{
+		padding-left: 1em;
+		padding-right: 1em;
+	}
+}
+
 .img-hero{
 	max-width: 100%;
 }
 
 .site-title{
-	float:left;
 	font-weight: bold;
 	font-size: 1.5em;
 	color: tomato;
@@ -76,10 +83,6 @@ p, h2{
 .site-title:hover{
 	background: tomato;
 	color: black;
-}
-
-.navbar{
-	float: right;
 }
 
 
@@ -101,7 +104,21 @@ p, h2{
 }
 
 .header-nav li{
-	display: inline-block;
+	margin-bottom: 0.25em;
+}
+
+@media(min-width: 630px){
+	.header-nav li{
+		display: inline-block;
+	}
+
+	.navbar{
+		float: right;
+	}
+
+	.site-title{
+		float:left;
+	}
 }
 
 .site-footer{
@@ -117,6 +134,7 @@ p, h2{
 	text-decoration: none;
 	color: black;
 	margin: 0 0.25em;
+	display: block;
 }
 
 .nav-link:hover{
@@ -124,11 +142,18 @@ p, h2{
 }
 
 /* Columns */
+@media(min-width: 630px){
+	.col{
+		float: left;
+		width: 33.33%;
+	}
 
-.col{
-	float: left;
-	width: 33.33%;
+	.content-columns{
+		text-align: center;
+	}	
 }
+
+
 
 /* Utilities */
 
@@ -141,20 +166,20 @@ p, h2{
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-.cf:before,
-.cf:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
-}
+ .cf:before,
+ .cf:after {
+ 	content: " "; /* 1 */
+ 	display: table; /* 2 */
+ }
 
-.cf:after {
-    clear: both;
-}
+ .cf:after {
+ 	clear: both;
+ }
 
 /**
  * For IE 6/7 only
  * Include this rule to trigger hasLayout and contain floats.
  */
-.cf {
-    *zoom: 1;
-}
+ .cf {
+ 	*zoom: 1;
+ }
